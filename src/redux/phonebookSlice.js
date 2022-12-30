@@ -1,17 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { nanoid } from '@reduxjs/toolkit';
 
-// {
-//   contacts: [],
-//   filter: ""
-// }
 
 export const phonebookSlice = createSlice({
   name: 'phonebook',
-  //   initialState: [
-  //     { id: 0, name: 'Рустам Асланов', number: '911' },
-  //     { id: 1, name: 'Репета Олександр', number: '111' },
-  //   ],
   initialState: {
     contacts: [
       { id: 0, name: 'Рустам Асланов', number: '911' },
@@ -22,7 +14,6 @@ export const phonebookSlice = createSlice({
   reducers: {
     addContact: {
       reducer(state, action) {
-        console.log(action);
         const checkSimilar = state.contacts.some(
           item => item.name.toLowerCase() === action.payload.name.toLowerCase()
         );
