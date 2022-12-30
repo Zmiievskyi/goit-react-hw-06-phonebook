@@ -1,15 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from 'redux/actions';
-
 import { Filter } from '../Filter/Filter';
 import { Box } from '../Common/Common.styled';
+import { getSearchName, getContacts } from 'redux/selector';
 
 export const Contacts = () => {
 
-  const contactsList = useSelector(state => state.contacts);
-  const searchName = useSelector(state => state.filter);
+  const contactsList = useSelector(getContacts);
+  const searchName = useSelector(getSearchName);
+
   const filtredList = contactsList.filter(contact =>
-    contact.name.toLowerCase().includes(searchName.filter)
+    contact.name.toLowerCase().includes(searchName)
   );
   
   const dispatch = useDispatch();

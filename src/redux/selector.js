@@ -1,3 +1,7 @@
-// export const getTasks = state => state.tasks;
+// import { useSelector } from 'react-redux';
 
-export const getContactsFilter = state => state.filters.status;
+// export const contactsList = useSelector(state => state.contacts);
+
+// export const searchName = useSelector(state => state.filter);
+export const getContacts = state => state.contacts;
+export const getSearchName = state => state.filter.filter;
