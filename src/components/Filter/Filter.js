@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { Label } from 'components/Common/Common.styled';
-import { setFilter } from 'redux/filterSlice';
+// import { setFilter } from 'redux/filterSlice';
+import { setFilter } from 'redux/phonebookSlice';
 
 export const Filter = () => {
 
