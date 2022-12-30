@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { Box, Button, Label } from 'components/Common/Common.styled';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import { addContact } from 'redux/actions';
+import { addContact } from 'redux/phonebookSlice';
 
 let schema = yup.object().shape({
   name: yup.string().min(4).max(12).required(),

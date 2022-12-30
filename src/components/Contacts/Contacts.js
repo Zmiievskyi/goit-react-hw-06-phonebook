@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from 'redux/actions';
+import { deleteContact } from 'redux/phonebookSlice';
 import { Filter } from '../Filter/Filter';
 import { Box } from '../Common/Common.styled';
 import { getSearchName, getContacts } from 'redux/selector';

@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Label } from 'components/Common/Common.styled';
-import { setFilter } from 'redux/actions';
+import { setFilter } from 'redux/filterSlice';
 
 export const Filter = () => {
 
@@ -9,7 +9,6 @@ export const Filter = () => {
   const handleFilter = evt => {
     
     const searchName = evt.target.value.toLowerCase();
-    // console.log(searchName);
     dispatch(setFilter(searchName));
   };
 
